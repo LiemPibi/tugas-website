@@ -1,22 +1,26 @@
-# website-laravel
+# tugas-website
 
-## Cara membuka web di Firefox
+## Cara menjalankan dan membuka di Firefox
 
-1. Pastikan sudah berada di folder project:
+1. Masuk ke folder project:
    ```bash
-   cd /workspace/website-laravel
+   cd /workspace/tugas-website
    ```
-2. Jalankan server PHP bawaan (contoh di port `8000`):
+2. Jalankan server Laravel:
    ```bash
-   php -S 127.0.0.1:8000 -t public
+   php artisan serve --host=127.0.0.1 --port=8000
    ```
-3. Buka Firefox.
-4. Masuk ke alamat berikut:
-   - Halaman utama products: `http://127.0.0.1:8000/products`
-   - Form tambah produk: `http://127.0.0.1:8000/products/create`
+3. Buka Firefox, lalu akses:
+   - Home: `http://127.0.0.1:8000/`
+   - Products: `http://127.0.0.1:8000/products`
+   - Add Product: `http://127.0.0.1:8000/products/create`
 
-> Jika project ini dijalankan sebagai Laravel penuh (dengan `artisan`), kamu juga bisa pakai:
-> ```bash
-> php artisan serve --host=127.0.0.1 --port=8000
-> ```
-> lalu buka URL yang sama di Firefox.
+## Fitur yang tersedia
+
+- ProductController + route group `/products`.
+- Minimal 3 kategori produk.
+- Total 30 produk.
+- Pencarian berdasarkan nama/deskripsi.
+- Filter range harga (min & max).
+- Pengurutan produk berdasarkan nama/harga.
+- Home page dengan tampilan Bootstrap yang lebih menarik.
